@@ -6,9 +6,9 @@ export default function (input, data = {}, {
   }
 
   //          |        match start       | match content   |         match end        |
-  const re = /\/\*\s*@@([\w.\-_]+)\s*\*\/\s*([\s\S]*?)\s*\/\*\s*([\w.\-_]+)@@\s*\*\//g
+  const re = /\/\*\s*@@([\w.\-_]+)\s*\*\/\s*(?:[\s\S]*?)\s*\/\*\s*([\w.\-_]+)@@\s*\*\//g
 
-  return input.replace(re, (match, key, _, endKey) => {
+  return input.replace(re, (match, key, endKey) => {
     if (key === endKey) {
       let ret = data
 
