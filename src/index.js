@@ -5,7 +5,7 @@ export default function (input, data = {}, {
     throw new Error('Expected input to be string')
   }
 
-  //          |        match start       | match content    |         match end        |
+  //          |        match start       | match content   |         match end        |
   const re = /\/\*\s*@@([\w.\-_]+)\s*\*\/\s*([\s\S]*?)\s*\/\*\s*([\w.\-_]+)@@\s*\*\//g
 
   return input.replace(re, (match, key, _, endKey) => {
