@@ -8,6 +8,10 @@
 yarn add poper
 ```
 
+## How does it work
+
+It matches a starting comment `/* @@variable */` and an ending comment `/* variable@@ */`, finally it replaces the comments and content within using the `data` you provide. The `variable` supports dot path like `foo.deep.key`
+
 ## Usage
 
 ```js
