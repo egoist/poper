@@ -15,7 +15,7 @@ It matches a starting comment `/* @@variable */` and an ending comment `/* varia
 ## Usage
 
 ```js
-const poper = require('./')
+const poper = require('poper')
 
 const input = `
 {
